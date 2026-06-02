@@ -3,8 +3,8 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-GEMINI_API_KEY = os.getenv("AIzaSyCpjiTwwicLvYleB8OXmIpp3B5Mk3iTDvA")
-LLM_MODEL = "gemini-1.5-flash"
+GROQ_API_KEY = os.getenv("GROQ_API_KEY")
+LLM_MODEL = "llama-3.1-8b-instant"
 
 RAW_DATA_PATH = "data/raw/telco_churn.csv"
 PROCESSED_DATA_PATH = "data/processed/churn_processed.csv"
