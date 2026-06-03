@@ -28,13 +28,7 @@ app = FastAPI(title="ChurnIQ API", version="1.0.0", lifespan=lifespan)
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        "http://localhost:3000",
-        "http://127.0.0.1:3000",
-        "https://churn-iq-henna.vercel.app",
-        "https://churn-3d9mva5i6-aasthav-projects.vercel.app",
-        "https://churn-44r96iv1w-aastha-v-projects.vercel.app/",
-    ],
+    allow_origin_regex=r"https://.*\.vercel\.app",
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
